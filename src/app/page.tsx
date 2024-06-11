@@ -1,95 +1,77 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
 
-export default function Home() {
+import Image from 'next/image';
+import React, { FC, useState } from 'react';
+import { Navigation } from '../components/Navigation';
+import coin_logo_main from "../../public/coin_logo_main.svg";
+import ticket from "../../public/ticket.svg";
+import { observer } from 'mobx-react-lite';
+import UserStore from '../store/user-store';
+import { IUser } from '@/types/types';
+
+
+const Home: FC = observer(() => {
+
+  const { isAuth, username, setUsername, setIsAuth }: IUser = UserStore;
+  const [login, setLogin] = useState<string>('');
+
+  const signIn = (): void => {
+    // добавить логику регистрации в бд
+    setIsAuth(true);
+    setUsername(login);
+  }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div className="container">
+      <div className="container__inner">
+
+        {isAuth
+          ?
+          <>
+            <div className="header">
+              <span>Y</span> {/* первая буква имени */}
+              <span>{username}</span>
+
+              <button>connect wallet</button>
+            </div>
+
+            <div className="main-content">
+              <div className="coin">
+                <Image src={coin_logo_main} alt="coin image" />
+                <h1 className="coin__balance">0.000</h1>
+                <span className="coin__text">invite friends and completed tasks for </span>
+                <Image src={ticket} alt="ticket" />
+              </div>
+
+              <div className="game">
+                <h2 className="game__title">Play game</h2>
+                <span className="game__attempts">10 </span>
+                <Image src={ticket} alt="ticket" />
+              </div>
+
+              <div className="farming">
+                <p className="farming__balance">farming: 55.000 KRC</p>
+                <p className="farming__timer">01h 30m</p>
+              </div>
+
+              <Navigation />
+
+            </div>
+          </>
+          :
+          <div className="indicate">
+            <div className='indicate__wrapper'>
+              <h1 className="indicate__title">Indicate the name</h1>
+              <form className="indicate__form">
+                <input value={login} onChange={() => setLogin} type="text" name="login" placeholder="Login" required />
+                <button onClick={signIn} type='submit'>Sign in</button>
+              </form>
+            </div>
+          </div>
+        }
       </div>
+    </div>
+  )
+})
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
-}
+export default Home;
