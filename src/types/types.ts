@@ -5,3 +5,9 @@ export interface IUser {
     setUsername(username: string): void
     setIsAuth(bool: boolean): void
 }
+
+
+export interface ICanvas {
+    isOpen: boolean;
+    setIsOpen(bool: boolean): void;
+}

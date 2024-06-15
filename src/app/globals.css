@@ -18,8 +18,9 @@ body {
   margin: 0 auto;
   max-width: 400px;
   max-height: 700px;
-
 }
+
+/* Login page */
 
 .indicate__wrapper {
   display: flex;
@@ -27,3 +28,342 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
+/* .indicate__title {
+  font-weight: 900;
+  font-size: 26px;
+  margin-bottom: 25px;
+} */
+
+.indicate__form input {
+  border: 0;
+  border-bottom: 2px solid #8A00F6;
+  border-radius: 15px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 25px;
+  height: 40px;
+  text-align: center;
+  padding: 15px;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 25px;
+  font-weight: 600;
+  opacity: 0.65;
+}
+
+.indicate__form input:focus {
+  outline: 0;
+  color: #fff;
+  opacity: 0.65;
+}
+
+.indicate__form button {
+  width: 100%;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  height: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+.indicate__form button:hover {
+  color: #000;
+  background: #fff;
+}
+
+/* Login page */
+
+
+/* Home page */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.header__login-ava {
+  display: inline-block;
+  padding: 5px;
+  width: 30px;
+  background: #0098EA;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.header__login-text {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.main-content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coin {
+  margin-bottom: 30px;
+}
+
+.coin__main-img {
+  cursor: pointer;
+}
+
+.coin__balance {
+  font-weight: 900;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.coin__text {
+  text-align: center;
+  color: #A6A6A6;
+  font-size: 16px;
+  font-weight: light;
+}
+
+
+.game {
+  cursor: pointer;
+  width: 100%;
+  height: 70px;
+  background: #101010;
+  color: #fff;
+  padding: 11px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.game__title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.game__attempts {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.farming {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333333;
+  height: 30px;
+  border-radius: 10px;
+  padding: 7px 20px;
+  margin-bottom: 50px;
+}
+
+.farming__balance {
+  color: #fff;
+  opacity: 0.55;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.farming__timer {
+  color: #fff;
+  opacity: 0.55;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Home page */
+
+.tasks__header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tasks__title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.tasks__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tasks__card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: #101010;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.tasks__card div {
+  display: flex;
+  align-items: center;
+}
+
+.tasks__card div p {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.65;
+  font-weight: 400;
+}
+
+.tasks__card_button {
+  cursor: pointer;
+  padding: 5px 20px;
+  background: #353535;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+  border-radius: 13px;
+  transition: all 300ms ease;
+}
+
+.tasks__card_button:hover {
+  opacity: 0.65;
+}
+
+.tasks__title_sec {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.tasks__card-last {
+  margin-bottom: 55px;
+}
+
+/* friends */
+
+.friends__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.friends__header img {}
+
+.friends__title {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.friends__balance {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.friends__button {
+  cursor: pointer;
+  width: 20%;
+  border: 0;
+  background: #8700F0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px 25px;
+  border-radius: 30px;
+  box-shadow: 0px 5px 100px 0px rgba(135, 0, 240, 0.97);
+  margin-bottom: 15px;
+  transition: all 300ms ease;
+}
+
+.friends__button:hover {
+  opacity: 0.65;
+}
+
+.friends__text {
+  text-align: center;
+  color: #fff;
+  opacity: 0.65;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.friends__count {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.friends__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.friends__card {
+  width: 100%;
+  background: #101010;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.friends__card-ava {
+  display: inline-block;
+  padding: 10px;
+  width: 40px;
+  background: #0098EA;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.friends__card-balance {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.65;
+  font-weight: 400;
+}
+
+.friends__invite {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 70px;
+  border: 0;
+  background: #8A00F6;
+  padding: 15px 85px;
+  font-size: 20px;
+  color: #D6A6FC;
+  font-weight: 900;
+  border-radius: 10px;
+  margin-bottom: 31px;
+  transition: all 300ms ease;
+}
+
+.friends__invite:hover {
+  opacity: 0.65;
+}
+
+/* friends */

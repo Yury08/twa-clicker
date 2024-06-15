@@ -1,0 +1,33 @@
+.navigation {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation__item {
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+    transition: all 300ms ease;
+}
+
+.navigation__item_title {
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navigation__item:hover {
+    opacity: 0.65;
+}
+
+
+.navigation__icon {
+    font-size: 20px;
+    margin-bottom: 5px;
+}

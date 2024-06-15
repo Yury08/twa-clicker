@@ -5,7 +5,7 @@ class UserStore {
     private _isAuth: boolean;
     private _username: string;
     constructor() {
-        this._isAuth = false;
+        this._isAuth = true;
         this._username = "";
         makeAutoObservable(this);
     }
