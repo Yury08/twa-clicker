@@ -17,7 +17,6 @@ body {
 .container__inner {
   margin: 0 auto;
   max-width: 400px;
-  max-height: 700px;
 }
 
 /* Login page */
@@ -117,6 +116,11 @@ body {
 
 .coin__main-img {
   cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.coin__main-img:active {
+  transform: scale(0.9);
 }
 
 .coin__balance {
@@ -125,6 +129,7 @@ body {
   text-align: center;
   margin-bottom: 10px;
 }
+
 
 .coin__text {
   text-align: center;
@@ -155,8 +160,11 @@ body {
   font-size: 15px;
 }
 
+
 .farming {
-  width: 100%;
+  width: 92%;
+  position: fixed;
+  bottom: 13%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -164,7 +172,6 @@ body {
   height: 30px;
   border-radius: 10px;
   padding: 7px 20px;
-  margin-bottom: 50px;
 }
 
 .farming__balance {
@@ -222,8 +229,7 @@ body {
 .tasks__card div p {
   margin-left: 10px;
   font-size: 14px;
-  color: #fff;
-  opacity: 0.65;
+  color: #7B7B7B;
   font-weight: 400;
 }
 
@@ -250,10 +256,6 @@ body {
   font-weight: 400;
 }
 
-.tasks__card-last {
-  margin-bottom: 55px;
-}
-
 /* friends */
 
 .friends__header {
@@ -263,7 +265,6 @@ body {
   justify-content: center;
 }
 
-.friends__header img {}
 
 .friends__title {
   margin-bottom: 15px;
@@ -279,7 +280,6 @@ body {
 
 .friends__button {
   cursor: pointer;
-  width: 20%;
   border: 0;
   background: #8700F0;
   color: #fff;
@@ -353,7 +353,7 @@ body {
   margin-top: 70px;
   border: 0;
   background: #8A00F6;
-  padding: 15px 85px;
+  padding: 15px 0;
   font-size: 20px;
   color: #D6A6FC;
   font-weight: 900;

@@ -37,8 +37,9 @@ const Friends: FC = () => {
                 </div>
 
                 <button onClick={handleOpen} className='friends__invite'>Invite your friends</button>
+                <Navigation />
+
             </div>
-            <Navigation />
             {isOpen
                 ?
                 <BottomCanvas isOpen={isOpen} setIsOpen={setIsOpen} />

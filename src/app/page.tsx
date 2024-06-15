@@ -8,12 +8,20 @@ import ticket from "../../public/ticket.svg";
 import { observer } from 'mobx-react-lite';
 import UserStore from '../store/user-store';
 import { IUser } from '@/types/types';
+import { AnimationText } from '../components/AnimationText';
 
 
 const Home: FC = observer(() => {
   const { isAuth, username, setUsername, setIsAuth }: IUser = UserStore;
   const [login, setLogin] = useState<string>('');
+  const [showText, setShowText] = useState<boolean>(false);
+  const [score, setScore] = useState<number>(+10);
 
+
+  const handleCoinClick = () => {
+    setShowText(!showText);
+    // Логика для начисления очков
+  };
 
 
   // const signIn = (): void => {
@@ -37,7 +45,8 @@ const Home: FC = observer(() => {
 
           <div className="main-content">
             <div className="coin">
-              <Image className='coin__main-img' src={coin_logo_main} width={300} height={300} alt="coin image" />
+              {showText && <AnimationText value={score} />}
+              <Image onClick={handleCoinClick} className='coin__main-img' src={coin_logo_main} width={350} height={350} alt="coin image" />
               <h1 className="coin__balance">5,240.000 KRC</h1>
               <p className="coin__text">invite friends and completed tasks for <Image src={ticket} alt="ticket" /></p>
             </div>

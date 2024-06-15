@@ -1,0 +1,19 @@
+.animation_text {
+    font-size: 30px;
+    position: absolute;
+    top: 20%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    animation: pop-up 0.1s ease forwards;
+}
+
+@keyframes pop-up {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

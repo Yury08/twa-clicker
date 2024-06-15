@@ -40,6 +40,8 @@ const Tasks: FC = () => {
                     </div>
                     <button type='submit' className='tasks__card_button'>claim</button>
                 </div>
+                <Navigation />
+
             </div>
             <h2 className='tasks__title_sec'>Airdrop tasks</h2>
             <div className='tasks__card tasks__card-last'>
@@ -48,7 +50,6 @@ const Tasks: FC = () => {
                     <p className='tasks__card_text'>Connect your TON wallet</p>
                 </div>
             </div>
-            <Navigation />
         </>
     )
 }
