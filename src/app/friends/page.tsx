@@ -24,7 +24,14 @@ const Friends: FC = () => {
                 <div className='friends__card'>
                     <div className='friends__card-name'>
                         <span className='friends__card-ava'>Y</span>
-                        <span>Yuri Kravzov</span>
+                        <span className='friends__card-name'>Yuri Kravzov</span>
+                    </div>
+                    <p className='friends__card-balance'>150.111 KRC</p>
+                </div>
+                <div className='friends__card'>
+                    <div className='friends__card-name'>
+                        <span className='friends__card-ava'>Y</span>
+                        <span className='friends__card-name'>Yuri Kravzov</span>
                     </div>
                     <p className='friends__card-balance'>150.111 KRC</p>
                 </div>
@@ -35,8 +42,9 @@ const Friends: FC = () => {
                     </div>
                     <p className='friends__card-balance'>280.666 KRC</p>
                 </div>
-
-                <button onClick={handleOpen} className='friends__invite'>Invite your friends</button>
+                <div className='friends__invite'>
+                    <button className='friends__invite-button' onClick={handleOpen}>Invite your friends</button>
+                </div>
                 <Navigation />
 
             </div>

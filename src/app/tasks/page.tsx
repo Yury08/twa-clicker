@@ -36,7 +36,7 @@ const Tasks: FC = () => {
                 <div className='tasks__card'>
                     <div>
                         <Image src={logo_telegram} alt="logo_telegram" className='tasks__card_img' />
-                        <p className='tasks__card_text'>Subscribe to our TG channel<br />+150 KRC</p>
+                        <p className='tasks__card_text'>Subscribe to our TG<br />+150 KRC</p>
                     </div>
                     <button type='submit' className='tasks__card_button'>claim</button>
                 </div>

@@ -46,8 +46,8 @@ const Home: FC = observer(() => {
           <div className="main-content">
             <div className="coin">
               {showText && <AnimationText value={score} />}
-              <Image onClick={handleCoinClick} className='coin__main-img' src={coin_logo_main} width={350} height={350} alt="coin image" />
-              <h1 className="coin__balance">5,240.000 KRC</h1>
+              <Image onClick={handleCoinClick} className='coin__main-img' src={coin_logo_main} width={250} height={250} alt="coin image" />
+              <h3 className="coin__balance">5,240.000 KRC</h3>
               <p className="coin__text">invite friends and completed tasks for <Image src={ticket} alt="ticket" /></p>
             </div>
 
@@ -57,9 +57,11 @@ const Home: FC = observer(() => {
               <Image src={ticket} alt="ticket" />
             </div>
 
-            <div className="farming">
-              <p className="farming__balance">farming: 55.000 KRC</p>
-              <p className="farming__timer">01h 30m</p>
+            <div className='farming__block'>
+              <div className="farming">
+                <p className="farming__balance">farming: 55.000 KRC</p>
+                <p className="farming__timer">01h 30m</p>
+              </div>
             </div>
 
             <Navigation />

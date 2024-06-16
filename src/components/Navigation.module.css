@@ -6,7 +6,7 @@
     align-items: center;
     position: fixed;
     bottom: 0;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .navigation__item {
@@ -18,7 +18,7 @@
 }
 
 .navigation__item_title {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 300;
     color: #fff;
     text-decoration: none;
